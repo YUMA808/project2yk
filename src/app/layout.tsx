@@ -11,7 +11,8 @@ import {
   SignedIn,
   SignedOut,
   UserButton
-} from '@clerk/nextjs'
+} from '@clerk/nextjs';
+ import UploadThingButton from "./_components/button";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -30,6 +31,7 @@ export default function RootLayout({
             <SignInButton />
           </SignedOut>
           <SignedIn>
+            <UploadThingButton />
             <UserButton />
           </SignedIn>
           {children}
